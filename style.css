@@ -1,63 +1,48 @@
-/* Modern General Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif; /* More modern font */
-  background-color: #f9f9f9; /* Slightly off-white background */
-  color: #333; /* Darker, more readable text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Use min-height for full viewport height */
+/* Services Section */
+#services {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
   text-align: center;
-  transition: background-color 0.5s ease; /* Smooth transition for background changes */
 }
 
-h1 {
-  font-size: 3.5rem; /* Larger heading */
-  font-weight: 700; /* Bold font weight */
-  color: #2c3e50; /* Darker, more sophisticated heading color */
-  margin-bottom: 30px; /* Increased margin */
-  letter-spacing: -0.02em;
-  transition: color 0.3s ease;
-}
-
-p {
-  font-size: 1.15rem; /* Slightly smaller, more modern font size */
-  color: #555; /* Slightly lighter text for better readability */
+#services h2 {
+  font-size: 2.5rem;
+  color: #003366; /* Dark Blue */
   margin-bottom: 40px;
-  line-height: 1.7; /* Improved line height for better readability */
-  font-weight: 400;
-  transition: color 0.3s ease;
 }
 
-.container {
-  max-width: 1200px; /* Slightly wider container */
-  padding: 40px; /* Increased padding */
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.85); /* Add some transparency to the container */
-  border-radius: 12px; /* Rounded corners for the container */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* More subtle shadow */
-  backdrop-filter: blur(10px);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-/* Add hover effects to elements */
-h1:hover {
-  color: #3498db; /* Change color on hover (e.g., to a blue accent color) */
+.service-category {
+  width: 45%;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-p:hover {
-  color: #7f8c8d;
+.service-category h3 {
+  color: #ff6600; /* Orange */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-.container:hover{
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+.service-category ul {
+  list-style-type: none;
+  padding: 0;
 }
-body:hover {
-    background-color: #f4f4f4;
+
+.service-category li {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.service-category li strong {
+  color: #003366; /* Dark Blue */
 }
