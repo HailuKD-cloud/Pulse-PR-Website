@@ -42,6 +42,14 @@ nav {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo a img {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .nav-links {
@@ -60,9 +68,9 @@ nav {
     text-decoration: none;
 }
 
-/* Updated Hero Section */
+/* Updated Hero Section with Gradient Background and Overlay */
 #home {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(34, 49, 63, 0.7)), url('hero-bg.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 150px 20px;
@@ -133,6 +141,61 @@ nav {
     flex: 1;
 }
 
+/* -------------------- Portfolio Section Styles -------------------- */
+#portfolio .portfolio-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .portfolio-item h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#portfolio .portfolio-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#portfolio .portfolio-images {
+    flex-shrink: 0;
+    width: 200px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#portfolio .portfolio-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .portfolio-description {
+    flex-grow: 1;
+}
+
+#portfolio .portfolio-description p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* -------------------- Blog Section Styles -------------------- */
+#blog {
+    text-align: center;
+}
+
+#blog p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 20px;
+}
+
 /* Updated Contact Section */
 #contact .contact-form {
     max-width: 600px;
@@ -198,6 +261,10 @@ footer {
     }
 
     /* Navigation for smaller screens */
+    nav {
+        position: relative; /* Needed for absolute positioning of nav-links */
+    }
+
     .nav-links {
         display: none; /* Hide the full navigation initially */
         flex-direction: column;
@@ -235,6 +302,7 @@ footer {
 
     /* Hero section for smaller screens */
     #home {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(34, 49, 63, 0.6)), url('hero-bg.jpg') center/cover no-repeat;
         padding: 100px 15px;
     }
 
@@ -262,6 +330,18 @@ footer {
     }
 
     #about .about-image {
+        margin-bottom: 20px;
+    }
+
+    /* Portfolio section for smaller screens */
+    #portfolio .portfolio-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #portfolio .portfolio-images {
+        width: 80%;
+        max-width: 300px;
         margin-bottom: 20px;
     }
 
