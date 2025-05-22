@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | PULSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (copy from index.html for consistency) -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-3xl font-bold text-indigo-600">PULSE</div>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="services.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="portfolio.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">Portfolio</a>
+                <a href="blog.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">Blog</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" onclick="showPage('home')">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" onclick="showPage('services')">Services</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" onclick="showPage('about')">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" onclick="showPage('portfolio')">Portfolio</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" onclick="showPage('contact')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold text-gray-800 mb-4">Pulse Insights & Blog</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our latest articles, tips, and industry news on PR, digital marketing, branding, and more.
+            </p>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Blog Post 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-1">
+                    <span class="text-indigo-600 font-semibold text-xs mb-2">Digital Marketing</span>
+                    <h2 class="text-2xl font-bold mb-2">5 Social Media Trends to Watch in 2025</h2>
+                    <p class="text-gray-600 mb-4 flex-1">Stay ahead of the curve with these emerging trends that will shape your brand’s online presence this year.</p>
+                    <a href="#" class="text-indigo-600 font-semibold hover:underline mt-auto">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-1">
+                    <span class="text-purple-600 font-semibold text-xs mb-2">Branding</span>
+                    <h2 class="text-2xl font-bold mb-2">Building a Memorable Brand Identity</h2>
+                    <p class="text-gray-600 mb-4 flex-1">Discover the key elements of a strong brand and how to create a lasting impression in your market.</p>
+                    <a href="#" class="text-purple-600 font-semibold hover:underline mt-auto">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-1">
+                    <span class="text-blue-600 font-semibold text-xs mb-2">Web Development</span>
+                    <h2 class="text-2xl font-bold mb-2">Why Your Website Needs a Redesign in 2025</h2>
+                    <p class="text-gray-600 mb-4 flex-1">Learn how a modern, responsive website can boost your credibility and conversions.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline mt-auto">Read More</a>
+                </div>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </div>
+
+        <!-- Pagination (optional) -->
+        <div class="flex justify-center mt-12">
+            <nav class="inline-flex rounded-md shadow">
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 rounded-l-md">Previous</a>
+                <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-indigo-600 font-bold">1</a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">2</a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">3</a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 rounded-r-md">Next</a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
 
